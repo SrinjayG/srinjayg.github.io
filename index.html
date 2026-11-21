@@ -1,2 +1,176 @@
-<h1> Hello World</h1>
-<p> BWOAH</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srinjay Ghoshal — Product</title>
+<meta name="description" content="Srinjay Ghoshal — AI & Product at Cannex AI, a Hong Kong KYC and incorporation fintech. HKUST Computer Science, Minor in Business.">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --text: #1a1a1a;
+    --muted: #5f5f5f;
+    --line: #e4e2dd;
+    --accent: #1f4fd1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  main { max-width: 740px; margin: 0 auto; padding: 72px 24px 96px; }
+  .avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 20px; }
+  h1 { font-size: 34px; letter-spacing: -0.02em; line-height: 1.2; }
+  .tagline { color: var(--muted); margin-top: 10px; font-size: 18px; }
+  .links { margin-top: 18px; display: flex; gap: 18px; flex-wrap: wrap; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  section { margin-top: 56px; }
+  h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); font-weight: 600; padding-bottom: 10px;
+    border-bottom: 1px solid var(--line); margin-bottom: 24px;
+  }
+  .item { margin-bottom: 36px; }
+  .item-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+  .item h3 { font-size: 18px; font-weight: 600; }
+  .when { color: var(--muted); font-size: 15px; white-space: nowrap; }
+  .role { color: var(--muted); font-size: 15px; margin-top: 2px; }
+  ul { margin-top: 12px; padding-left: 20px; }
+  li { margin-bottom: 10px; }
+  li strong { font-weight: 600; }
+  .about p + p { margin-top: 12px; }
+  .skills p { margin-bottom: 10px; }
+  .skills strong { font-weight: 600; }
+  .flow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; background: #f0eee9; padding: 1px 6px; border-radius: 4px; }
+  footer { margin-top: 72px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <img class="avatar" src="photo.jpg" alt="Srinjay Ghoshal" width="96" height="96">
+    <h1>Srinjay Ghoshal</h1>
+    <p class="tagline">I build AI agent products and decide where the agent takes over and where a person stays in charge.</p>
+    <div class="links">
+      <a href="mailto:srinjay.ghoshal@gmail.com">srinjay.ghoshal@gmail.com</a>
+      <a href="https://www.linkedin.com/in/srinjay-ghoshal-151ba4219/">LinkedIn</a>
+      <a href="https://github.com/SrinjayG">GitHub</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>Computer Science student at HKUST with a Minor in Business, based in Hong Kong. I started as a developer at a KYC fintech and moved myself into product, because I care more about <em>what</em> we build and <em>why</em> than how.</p>
+    <p>I still prototype myself before work goes to engineering.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="item">
+      <div class="item-head">
+        <h3>Cannex AI</h3>
+        <span class="when">Mar 2026 – Present</span>
+      </div>
+      <p class="role">AI &amp; Product Development Intern · Hong Kong fintech: KYC, onboarding and company incorporation</p>
+      <ul>
+        <li><strong>Specced an AI agent workspace.</strong> Own the Jira epic for the company-secretarial workspace; wrote user stories and acceptance criteria (document reuse, PDF preview with agent edits, signature approval, password-only e-signing) and split delivery across engineers.</li>
+        <li><strong>Made the call on how the agent works.</strong> Replaced Word-tag templates, which had weak preview and no editing after generation, with fillable government PDFs mapped for the agent so it can fill, preview and revise filings. Kept Word output for firms tied to their templates.</li>
+        <li><strong>Removed the onboarding bottleneck.</strong> Mapped how staff and clients actually exchange information, then built an agentic intake flow (<span class="flow">router → slot-filling → document intake → validation → email packaging</span>) that replaces manual back-and-forth, with rules grounded in Hong Kong KYC/AML requirements.</li>
+        <li><strong>Shipped LLM tools for non-technical users.</strong> Python document pipelines for the company-secretarial team: JSON extraction from audited financial statements, cash-runway calculations and redaction of sensitive documents, replacing manual data entry across client entities.</li>
+        <li><strong>Specified an AI vendor.</strong> With the CTO, defined business and API requirements for an external agentic KYC/KYB product across three flows (new incorporation, ad hoc KYC, register updates) and handed the spec to the vendor so it was built to our needs.</li>
+        <li><strong>Moved from developer to product owner.</strong> Proposed the role change; now own the client portal end to end: requirements, backlog prioritisation (Jira, Scrum) and short shipping iterations.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <h3>Retail Scan</h3>
+        <span class="when">Jan 2026 – Feb 2026</span>
+      </div>
+      <p class="role">Computer Vision Intern · Mumbai</p>
+      <ul>
+        <li>Built an unsupervised computer-vision system to flag invalid retail audit photos (faked, repeated or unrelated) with no labelled data to train or score against. Deployed into the company's production audit workflow.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects &amp; Entrepreneurship</h2>
+
+    <div class="item">
+      <div class="item-head">
+        <h3>Ryvara AI</h3>
+        <span class="when">Feb 2026 – Nov 2026</span>
+      </div>
+      <p class="role">Co-Founder · Hong Kong</p>
+      <ul>
+        <li><strong>Designed AI agents for financial data.</strong> Designed a multi-agent workflow (research, reconciliation and consolidation agents) for family offices. Selected for the HKSTP Co-Ideation Programme.</li>
+        <li><strong>Let users set the direction.</strong> Tested hypotheses with target users and pivoted from an Excel BI dashboard tool to agents after learning what they would actually adopt.</li>
+        <li><strong>Stopped at market validation.</strong> The venture ended before a working product. We couldn't validate enough demand to justify building it.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <h3>Instinct AI: group tally agent</h3>
+        <span class="when">Nov 2026 · <a href="https://github.com/SrinjayG/pintbot">GitHub</a></span>
+      </div>
+      <p class="role">Side project · Million Pint Challenge: a community counting toward 1,000,000 pints by 2036, starting with 12 friends and aiming for 1,000+ members</p>
+      <ul>
+        <li><strong>Replaced manual counting with an agent.</strong> Members post a photo and a description of each drink. Every Monday a Claude agent reads the week's messages, applies the group's rules (e.g. non-alcoholic drinks count half) and calculates the running total.</li>
+        <li><strong>Built to scale.</strong> Manual counting works for 12 people and breaks at 1,000. The agent is what lets the group grow without someone tallying by hand.</li>
+        <li><strong>Chose a read-only design to manage platform risk.</strong> WhatsApp can ban accounts that run automated messaging. The agent only reads the group through a linked device and sends the tally to me privately, never posting itself. I traded full automation for not risking my own WhatsApp account.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <div class="item-head">
+        <h3>The Hong Kong University of Science and Technology</h3>
+        <span class="when">Sept 2024 – May 2028</span>
+      </div>
+      <p class="role">BSc Computer Science, Minor in Business</p>
+      <ul>
+        <li>Coursework: Introduction to Generative AI, Exploring Artificial Intelligence, Software Engineering, Data Structures &amp; Algorithms, Entrepreneurship</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership &amp; Community</h2>
+    <div class="item">
+      <div class="item-head">
+        <h3>Peer Mentor, HKUST</h3>
+        <span class="when">Sept 2025 – May 2026</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <h3>Senior Peer Companion, HKUST</h3>
+        <span class="when">Dec 2024 – Present</span>
+      </div>
+      <p class="role">Peer support for student well-being · Mental Health First Aid certified</p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <p><strong>Product:</strong> user stories &amp; acceptance criteria, requirements specs, backlog prioritisation, Agile/Scrum (Jira), customer discovery, working with non-technical stakeholders</p>
+    <p><strong>AI &amp; ML:</strong> LLM agents (Claude), agentic workflow &amp; prompt design, evaluating AI tools and vendors, structured data extraction, document-processing pipelines, computer vision, PyTorch, TensorFlow</p>
+    <p><strong>Engineering:</strong> Python, SQL, TypeScript, Java, C++, REST APIs, Git, Docker</p>
+    <p><strong>Domain:</strong> KYC/AML, company incorporation, audited financial statements, cash-runway analysis</p>
+  </section>
+
+  <footer>Hong Kong · Open to product internships for Summer 2027</footer>
+
+</main>
+</body>
+</html>
